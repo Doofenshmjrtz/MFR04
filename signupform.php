@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylee.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Signup Form</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="submitscr.js" type="text/javascript"></script>
-    <script src="outputscr.js" type="text/javascript"></script>
-    <script src="deletescr.js" type="text/javascript"></script>
+    <script src="js/submitscr.js" type="text/javascript"></script>
+    <script src="js/outputscr.js" type="text/javascript"></script>
+    <script src="js/deletescr.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <form method="POST">
+    <form>
         <div class="container">
             <h1>Info vacuuminator</h1>
             <hr>
@@ -28,12 +28,11 @@
             <input type="text" placeholder="Enter Email" name="email" class="inputdata">
             <br>
             <button type="button" class="submitbtn" id="submit">Submit</button>
+            <button type="button" id="usersbtn">Show users</button>
+            <div id="report"></div>
         </div>
     </form>
-    <span id="report"></span>
-    <form method="POST"><button type="button" id="usersbtn">Show users</button></form>
-    <div id="users"><?php require 'useroutput.php'; ?></div>
-
+    <div id="users"></div>
 </body>
 
 </html>
