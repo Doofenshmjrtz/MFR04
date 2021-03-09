@@ -15,5 +15,14 @@ if ($check == true) {
         $sql = 'INSERT INTO users(name,last_name,email) VALUES(:name, :last_name, :email)';
         $query = $pdo->prepare($sql);
         $query->execute(['name' => $fname, 'last_name' => $lname, 'email' => $email]);
+
+
+        //sendmail
+        $message = "$fname $lname - email: $email";
+        $to = "test@developers-alliance.com";
+        $from = "test@developers-alliance.com";
+        $subject = "message";
+        $headers = "From: $from\r\n Reply-to: $from\r\n Content-type: text/plain; charset=utf-8\r\n";
+        mail($to, $subject, $message, $headers);
     }
 }
