@@ -32,7 +32,7 @@
             <div id="report"></div>
         </div>
     </form>
-    <div id="users"></div>
+    <div id="users"><?php require 'useroutput.php' ?></div>
 </body>
 
 </html>
