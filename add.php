@@ -11,17 +11,16 @@ if ($check == true) {
     } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         echo "<span class = 'form-error'>Enter valid Email!</span>";
     } else {
-        echo "<span class = 'form-success'>User has been added successfully!</span>";
         $sql = 'INSERT INTO users(name,last_name,email) VALUES(:name, :last_name, :email)';
         $query = $pdo->prepare($sql);
         $query->execute(['name' => $fname, 'last_name' => $lname, 'email' => $email]);
-
+        echo "<span class = 'form-success'>User has been added successfully!</span>";
 
         //sendmail
         $message = "$fname $lname - email: $email";
-        $to = "test@developers-alliance.com";
-        $from = "test@developers-alliance.com";
-        $subject = "message";
+        $to = "beqagvritishvili@gmail.com";
+        $from = "testingtooldoo@gmail.com";
+        $subject = "New user";
         $headers = "From: $from\r\n Reply-to: $from\r\n Content-type: text/plain; charset=utf-8\r\n";
         mail($to, $subject, $message, $headers);
     }
