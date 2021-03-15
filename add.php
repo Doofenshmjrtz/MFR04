@@ -18,7 +18,7 @@ if ($check == true) {
 
         //sendmail
         $message = "$fname $lname - email: $email";
-        $to = "beqagvritishvili@gmail.com";
+        $to = "test@developers-alliance.com";
         $from = "testingtooldoo@gmail.com";
         $subject = "New user";
         $headers = "From: $from\r\n Reply-to: $from\r\n Content-type: text/plain; charset=utf-8\r\n";
