@@ -1,0 +1,117 @@
+@import "vars.less";
+*{
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  hr {
+    border: 1px solid @border;
+    margin-bottom: 25px;
+  }
+  form {
+    border: 1px solid @form-border;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: @border;
+  }
+  input[type="text"]:focus {
+    background-color: @backgr-col;
+    outline: none;
+  }
+  .submitbtn {
+    align-self: center;
+    background-color: @user;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    width: 50%;
+    border: 1px solid @border;
+    transition: 0.1s;
+  }
+  .submitbtn:hover {
+    transition: 0.1s;
+    background-color: @user-hov;
+  }
+  #usersbtn {
+    align-self: center;
+    background-color: @user;
+    color: white;
+    padding: 7px 10px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.1s;
+  }
+  #usersbtn:hover {
+    transition: 0.1s;
+    background-color: @user-hov;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  #report {
+    height: 6px;
+    align-self: center;
+    margin: 15px;
+  }
+  #users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  #usersbtn {
+    margin: 5px;
+    width: 50%;
+    align-self: center;
+  }
+  ul {
+    padding: 0 10px !important;
+  }
+  #delete {
+    border: 0;
+    padding: 5px 15px;
+    color: white;
+    font-size: 13px;
+    background: @delete;
+    border-radius: 5px;
+  }
+  #delete:hover {
+    background: @delete-hov;
+  }
+  .form-error {
+    color: red;
+  }
+  .form-success {
+    color: green;
+  }
+  #list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  #list-item button {
+    margin-left: 10px;
+  }
