@@ -1,10 +1,15 @@
 <?php
 require 'configDB.php';
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 $sql = 'DELETE FROM users WHERE id = ?';
 $query = $pdo->prepare($sql);
 $query->execute([$id]);
 
-header('Location: /signupform.php');
+?>
+<script>
+    $(document).ready(function() {
+        $("#users").load("useroutput.php", {});
+    });
+</script>

@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Signup Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="js/submitscr.js" type="text/javascript"></script>
-    <script src="js/outputscr.js" type="text/javascript"></script>
-    <script src="js/deletescr.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/submitsrc.js"></script>
+    <script src="js/outputsrc.js"></script>
+    <script src="js/deletesrc.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
             <div id="report"></div>
         </div>
     </form>
-    <div id="users"><?php require 'useroutput.php' ?></div>
+    <div id="users"></div>
 </body>
 
 </html>
